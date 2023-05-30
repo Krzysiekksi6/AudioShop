@@ -1,0 +1,40 @@
+@use '/src/styles/colors' as var;
+.confirm-delete-dialog {
+  
+
+  &__button {
+    padding: 10px 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    text-decoration: none;
+    color: var.$color-accent;
+    border-style: none;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    &--cancel {
+      background-color: var.$color-primary;
+    }
+
+    &--delete {
+      background-color: var.$color-danger;
+    }
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 4rem;
+
+  &__btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+}
+

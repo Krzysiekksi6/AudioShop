@@ -1,0 +1,32 @@
+<div class="details">
+  <div class="details__content">
+    <div class="details__image">
+      <img
+        [src]="productDetails.image"
+        class="image"
+        alt="productDetails.name"
+      />
+    </div>
+    <div class="details__text">
+      <h4 *ngIf="productDetails.new" class="details__new-product">
+        new product
+      </h4>
+      <h2 class="details__title">{{ productDetails.name }}</h2>
+      <h4 class="details__title">Catalog name: {{ productDetails.slug }}</h4>
+      <p>{{ productDetails.description }}</p>
+      <p class="details__price">$ {{ productDetails.price }}</p>
+      <div class="details__btn-container">
+        <button class="details__button" [routerLink]="['/product/edit', id]">
+          Edit
+        </button>
+        <button class="details__button details__button--delete" confirmDelete>delete</button>
+      </div>
+    </div>
+  </div>
+  <div class="details__features">
+    <h2 class="details__title">features</h2>
+    <p class="details__description">
+      {{ productDetails.description }}
+    </p>
+  </div>
+</div>

@@ -1,0 +1,63 @@
+@use "/src/styles/colors" as var;
+
+.edit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    to right,
+    var.$color-primary,
+    var.$color-secondary
+  );
+  color: var.$color-white;
+
+  &__card {
+    padding: 3rem 6rem;
+    text-align: center;
+
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  &__form {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__button {
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    text-decoration: none;
+    color: var.$color-accent;
+    background-color: var.$color-btn;
+    border-style: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  &__button:hover {
+    background-color: var.$color-primary-bg;
+  }
+}
+
+.form-control {
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  border: none;
+  margin: 1rem;
+  border-bottom: 1px solid var.$color-btn;
+}
+input:focus {
+  outline: none;
+}

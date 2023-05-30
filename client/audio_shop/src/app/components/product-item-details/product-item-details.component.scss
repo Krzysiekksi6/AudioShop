@@ -1,0 +1,79 @@
+@use "/src/styles/colors" as var;
+.details {
+  background-color: var.$color-accent;
+  height: 100vh;
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+
+  &__image {
+    width: 50%;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+  }
+
+  &__new-product {
+    color: var.$color-primary;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  &__price {
+    font-weight: bold;
+  }
+
+  &__features {
+    padding: 1rem 6rem;
+    &__title {
+      padding: 1rem;
+    }
+    &__description {
+      padding: 1rem 2rem;
+    }
+  }
+
+  &__btn-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__button {
+    padding: 10px 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    text-decoration: none;
+    color: var.$color-accent;
+    background-color: var.$color-primary;
+    border-style: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  &__button--delete {
+    background-color: var.$color-danger;
+  }
+
+  &__button:hover {
+    background-color: var.$color-secondary;
+  }
+}
+
+.image {
+  width: 60%;
+  height: auto;
+}

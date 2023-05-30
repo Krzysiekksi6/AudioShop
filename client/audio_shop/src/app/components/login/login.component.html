@@ -1,0 +1,38 @@
+<div class="login">
+  <div class="login__card">
+    <h1>Login</h1>
+    <form action="post" autocomplete="off" method="POST">
+      <div class="input-group">
+        <input
+          [(ngModel)]="credentials.login"
+          type="text"
+          class="form-control"
+          name="username"
+          placeholder="Login"
+          title="Login"
+        />
+      </div>
+
+      <div class="input-group">
+        <input
+          [(ngModel)]="credentials.password"
+          type="password"
+          class="form-control"
+          name="password"
+          placeholder="Password"
+          title="Password"
+        />
+      </div>
+
+      <button
+        (click)="signIn()"
+        class="login__button"
+        type="submit"
+        title="Login Button"
+      >
+        Sigin
+      </button>
+    </form>
+    <p *ngIf="loginError" class="error-text">Failed to log in.</p>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<header class="header">
+  <app-navbar></app-navbar>
+  <div class="header__content">
+    <h4 class="header__subtitle">New product</h4>
+    <h1 class="header__title">XX99 Mark II Headphones</h1>
+    <p class="header__description">
+      Experience natural, lifelike audio and exceptional build quality made for
+      the passionate music enthusiast. Let's join us!
+    </p>
+      <button *ngIf="!authService.isLoggedIn()" class="header__button" [routerLink]="['/signup']">sign up</button>
+      <button *ngIf="authService.isLoggedIn()" (click)="onSeeProductsClick()" class="header__button">see products</button>
+  </div>
+</header>

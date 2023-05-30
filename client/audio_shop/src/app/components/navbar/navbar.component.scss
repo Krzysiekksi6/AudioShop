@@ -1,0 +1,99 @@
+@use "/src/styles/colors" as var;
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  color: var.$color-white;
+
+  &__burger {
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    display: none;
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+    cursor: default;
+  }
+
+  &__logo:hover {
+    color: var.$color-primary;
+  }
+
+  &__logo--accent {
+    text-transform: uppercase;
+    color: var.$color-primary;
+  }
+
+  &__items {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+  }
+
+  &__link {
+    text-decoration: none;
+    padding: 1rem 2rem;
+    color: var.$color-accent;
+  }
+
+  &__button {
+    padding: 10px 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    text-decoration: none;
+    color: var.$color-accent;
+    background-color: var.$color-primary;
+    border-style: none;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  &__button:hover {
+    background-color: var.$color-secondary;
+  }
+}
+
+.nav__link {
+  transition: color 0.3s;
+}
+.nav__item:hover {
+  color: var.$color-primary;
+}
+
+a:link {
+  color: var.$color-accent;
+}
+
+/* visited link */
+a:visited {
+  color: var.$color-accent;
+}
+
+/* mouse over link */
+a:hover {
+  color: var.$color-primary;
+}
+
+/* selected link */
+a:active {
+  color: var.$color-secondary;
+}

@@ -1,0 +1,39 @@
+<nav class="nav">
+  <span class="nav__burger">&#9776;</span>
+  <div class="nav__logo">audio<span class="nav__logo--accent">shop</span></div>
+  <div *ngIf="!authService.isLoggedIn()" class="nav__items">
+    <ul class="nav__list">
+      <li class="nav__item">
+        <a class="nav__link" href="#">Home</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="#">About</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="#">Services</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="#">Contact</a>
+      </li>
+        <button class="nav__button" [routerLink]="['/login']">Login</button>
+    </ul>
+  </div>
+
+  <div *ngIf="authService.isLoggedIn()" class="nav__items">
+    <ul class="nav__list">
+      <li class="nav__item">
+        <a class="nav__link" href="#" [routerLink]="['/addProduct']">Add</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="#">About</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="#">Services</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="#">Contact</a>
+      </li>
+        <button (click)="signOut()" class="nav__button">logout</button>
+    </ul>
+  </div>
+</nav>

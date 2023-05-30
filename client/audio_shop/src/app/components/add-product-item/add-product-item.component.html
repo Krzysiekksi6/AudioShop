@@ -1,0 +1,108 @@
+<div class="add">
+  <h1>Create New Product</h1>
+  <div class="add__card">
+    <form action="post" autocomplete="off" method="POST" class="add__form">
+      <div class="col">
+        <div class="input-group">
+          <input
+            type="text"
+            class="form-control"
+            name="slug"
+            placeholder="Slug"
+            title="Slug"
+            [(ngModel)]="newProduct.slug"
+          />
+        </div>
+        <div class="input-group">
+          <input
+            type="text"
+            class="form-control"
+            name="name"
+            placeholder="Name"
+            title="Name"
+            [(ngModel)]="newProduct.name"
+          />
+        </div>
+        <div class="input-group">
+          <input
+            type="text"
+            class="form-control"
+            name="image"
+            placeholder="Image"
+            title="Image"
+            [(ngModel)]="newProduct.image"
+          />
+        </div>
+        <div class="input-group">
+          <input
+            type="text"
+            class="form-control"
+            name="category"
+            placeholder="Category"
+            title="Category"
+            [(ngModel)]="newProduct.category"
+          />
+        </div>
+        <div class="input-group">
+          <label for="new">New Product?</label>
+          <input
+            type="radio"
+            name="new"
+            value="true"
+            [(ngModel)]="newProduct.new"
+            (change)="handleNewProductChange(true)"
+          />
+          New
+          <input
+            type="radio"
+            name="new"
+            value="false"
+            [(ngModel)]="newProduct.category"
+            (change)="handleNewProductChange(false)"
+          />
+          Old
+        </div>
+      </div>
+      <div class="col">
+        <div class="input-group">
+          <input
+            type="number"
+            class="form-control"
+            name="price"
+            placeholder="Price"
+            title="Price"
+            [(ngModel)]="newProduct.price"
+          />
+        </div>
+        <div class="input-group">
+          <input
+            type="text"
+            class="form-control"
+            name="description"
+            placeholder="Description"
+            title="Description"
+            [(ngModel)]="newProduct.description"
+          />
+        </div>
+        <div class="input-group">
+          <input
+            type="text"
+            class="form-control"
+            name="features"
+            placeholder="Features"
+            title="Features"
+            [(ngModel)]="newProduct.features"
+          />
+        </div>
+      </div>
+    </form>
+    <button
+      (click)="create()"
+      class="add__button"
+      type="submit"
+      title="Przycisk zaloguj"
+    >
+      add product
+    </button>
+  </div>
+</div>

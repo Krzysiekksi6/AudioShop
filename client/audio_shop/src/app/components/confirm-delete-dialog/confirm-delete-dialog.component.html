@@ -1,0 +1,27 @@
+<div class="container">
+  <h2 class="confirm-delete-dialog__title" mat-dialog-title>
+    Are you sure you want to delete?
+  </h2>
+  <mat-dialog-content>
+    <!-- Dodaj treść dialogu tutaj -->
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <div class="container__btn">
+      <button
+        class="confirm-delete-dialog__button confirm-delete-dialog__button--cancel"
+        mat-button
+        mat-dialog-close
+      >
+        Cancel
+      </button>
+      <button
+        class="confirm-delete-dialog__button confirm-delete-dialog__button--delete"
+        mat-button
+        color="warn"
+        [mat-dialog-close]="true"
+      >
+        Delete
+      </button>
+    </div>
+  </mat-dialog-actions>
+</div>

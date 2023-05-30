@@ -1,0 +1,17 @@
+<section class="shop" id="productSection">
+  <h2 class="shop__title">You May Also Like</h2>
+  <div class="shop__items">
+    <div class="shop__item" *ngFor="let item of items$ | filter : filterText">
+      <app-product-item
+        [name]="item.name"
+        [image]="item.image"
+        [id]="item.id"
+      ></app-product-item>
+      <button [routerLink]="['/product/detail/' + item.id]">More info</button>
+      <p>{{item.features | summary : 35}}</p>
+    </div>
+    <div *ngIf="!items$?.length">
+      <h2 class="error-text">Failed to fetch data...</h2>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,48 @@
+@use "/src/styles/colors" as var;
+
+.shop {
+  text-align: center;
+
+  &__title {
+    font-size: 28px;
+    text-transform: uppercase;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &__item {
+    width: 25%;
+    padding: 1rem;
+    background-color: var.$color-accent;
+  }
+}
+
+
+button {
+  padding: 10px 20px;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  text-decoration: none;
+  color: var.$color-accent;
+  background-color: var.$color-primary;
+  border-style: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var.$color-secondary;
+}
+
+.error-text {
+  color: #e21b1b;
+}
